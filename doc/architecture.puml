@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/component-diagram
+title Архитектура приложения
+
+MAIN -> [Consumer]
+note right of [Consumer] : Получение и обрабокта событий
+
+package "Event Processor" {
+  [Fetcher]
+  [Processor]
+  note left of [Fetcher] : Получение событий
+  note right of [Processor] : Обработка событий
+}
+
+
+[Client] -> BotAPI
+[FS Storage]
+
+[Consumer] --> [Fetcher]
+[Fetcher] <-> [Processor]
+[Processor] -> [Client]
+[Processor] --> [FS Storage]
+
+@enduml
