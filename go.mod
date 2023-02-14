@@ -1,3 +1,3 @@
-module example.com/m/v2
+module read_adviser_bot
 
 go 1.18

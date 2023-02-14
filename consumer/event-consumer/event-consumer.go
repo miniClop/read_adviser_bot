@@ -1,8 +1,8 @@
 package event_consumer
 
 import (
-	"example.com/m/v2/events"
 	"log"
+	"read_adviser_bot/events"
 	"time"
 )
 
@@ -25,7 +25,7 @@ func (c Consumer) Start() error {
 		gotEvents, err := c.fetcher.Fetch(c.batchSize)
 		if err != nil {
 			log.Printf("[ERR] consumer: %s", err.Error())
-
+			// TODO: Встроить механизм Retry
 			continue
 		}
 
@@ -45,9 +45,9 @@ func (c Consumer) Start() error {
 
 /*
 TODO: Доработка метода
-1. Потеря событий. Варианты решения: ретрай, возвращение в хранилище, фоллбек, подтверждение
+1. Потеря событий. Варианты решения: retry, возвращение в хранилище, фоллбек, подтверждение
 2. Обработка всей пачки. Варианты решения: останавливаться после первой ошибки, счетчик ошибок
-3. Паралельная обработка
+3. Параллельная обработка -> sync.WaitGroup{}
 */
 func (c *Consumer) handleEvents(events []events.Event) error {
 	for _, event := range events {

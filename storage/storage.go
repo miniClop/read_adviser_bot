@@ -3,9 +3,9 @@ package storage
 import (
 	"crypto/sha1"
 	"errors"
-	"example.com/m/v2/lib/e"
 	"fmt"
 	"io"
+	"read_adviser_bot/lib/e"
 )
 
 type Storage interface {

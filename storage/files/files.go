@@ -3,12 +3,12 @@ package files
 import (
 	"encoding/gob"
 	"errors"
-	"example.com/m/v2/lib/e"
-	"example.com/m/v2/storage"
 	"fmt"
 	"math/rand"
 	"os"
 	"path/filepath"
+	"read_adviser_bot/lib/e"
+	"read_adviser_bot/storage"
 	"time"
 )
 

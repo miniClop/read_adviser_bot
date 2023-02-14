@@ -1,13 +1,13 @@
 package main
 
 import (
-	tgClient "example.com/m/v2/clients/telegram"
-	"example.com/m/v2/consumer/event-consumer"
-
-	"example.com/m/v2/events/telegram"
-	"example.com/m/v2/storage/files"
 	"flag"
 	"log"
+
+	tgClient "read_adviser_bot/clients/telegram"
+	"read_adviser_bot/consumer/event-consumer"
+	"read_adviser_bot/events/telegram"
+	"read_adviser_bot/storage/files"
 )
 
 const (

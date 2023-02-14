@@ -2,10 +2,10 @@ package telegram
 
 import (
 	"errors"
-	"example.com/m/v2/lib/e"
-	"example.com/m/v2/storage"
 	"log"
 	"net/url"
+	"read_adviser_bot/lib/e"
+	"read_adviser_bot/storage"
 	"strings"
 )
 

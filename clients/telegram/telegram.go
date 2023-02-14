@@ -2,11 +2,11 @@ package telegram
 
 import (
 	"encoding/json"
-	"example.com/m/v2/lib/e"
 	"io"
 	"net/http"
 	"net/url"
 	"path"
+	"read_adviser_bot/lib/e"
 	"strconv"
 )
 
